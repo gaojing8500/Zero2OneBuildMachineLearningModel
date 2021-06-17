@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-17 20:09:14
- * @LastEditTime: 2021-06-17 20:26:49
+ * @LastEditTime: 2021-06-17 20:28:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /Zero2OneBuildMachineLearningModel/README.md
@@ -31,7 +31,9 @@
 
 ####  参考
 [Machine_Learning_Code_Implementation](https://github.com/luwill/Machine_Learning_Code_Implementation)
+
 [Scikit-learn](https://sklearn.apachecn.org/docs/examples/)
+
 [Gensim](https://radimrehurek.com/gensim/auto_examples/index.html#documentation)
 ### 深度学习模型
 #### CNN
@@ -41,8 +43,12 @@
 #### ......
 #### 参考文献
 [PaddlePaddle](https://www.paddlepaddle.org.cn/documentation/docs/zh/guides/index_cn.html)
+
 [Transformes](https://huggingface.co/transformers/examples.html)
+
 [Pytorch](https://pytorch.org/docs/stable/index.html)
+
 [Tensorflow](https://tensorflow.google.cn/tutorials)
+
 [best-of-ml-python](https://github.com/ml-tooling/best-of-ml-python)
 
