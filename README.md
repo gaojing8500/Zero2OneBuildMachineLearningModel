@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-17 20:09:14
- * @LastEditTime: 2021-06-18 16:15:24
+ * @LastEditTime: 2021-06-30 14:54:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /Zero2OneBuildMachineLearningModel/README.md
@@ -28,6 +28,7 @@
 #### GMM
 #### KNN
 #### LDA
+#### 贝叶斯(Bayesian model)
 
 #### ......
 
@@ -37,12 +38,20 @@
 [Scikit-learn](https://sklearn.apachecn.org/docs/examples/)
 
 [Gensim](https://radimrehurek.com/gensim/auto_examples/index.html#documentation)
+
+[手动推导经典机器学习模型](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI4ODY2NjYzMQ==&action=getalbum&album_id=1369989062744211457&scene=173&from_msgid=2247484471&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 ### 深度学习模型
 #### CNN
 #### RNN
 #### Transformer
 #### Transformer-x
-#### Attention
+#### Attention(self-attention)
+#### Seq2Seq
+#### GNN
+#### embeddding method
+##### word2vec
+##### fasttext
+##### node2vec
 #### ......
 #### 参考文献
 [PaddlePaddle](https://www.paddlepaddle.org.cn/documentation/docs/zh/guides/index_cn.html)
@@ -57,4 +66,13 @@
 [深度学习中的 Attention 机制总结与代码实现（2017-2021年）](https://mp.weixin.qq.com/s?__biz=MzUxNjcxMjQxNg==&mid=2247526434&idx=2&sn=090d59b08e5786dbe18009ce796ee710&chksm=f9a11aadced693bbd3043ddcc8737e23da342f114f982b3ce1af3e110e0c8f118e8212ce1fd9&mpshare=1&scene=1&srcid=06181OYw3rMukzkeg44Hxfj4&sharer_sharetime=1623993035612&sharer_shareid=bb12138cbf7121360054152c6932a462&version=3.1.8.3015&platform=win#rd)
 
 [xmu-xiaoma666/External-Attention-pytorch](https://github.com/xmu-xiaoma666/External-Attention-pytorch)
+
+[Graph Neural Networks for Natural Language Processing: A Survey](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247503451&idx=1&sn=0cfb45f050568f6f8fe681425f6ad078&chksm=eb53dac8dc2453dea1a32162267737c7d5458c6665d507fd1859b9e8d3909717cb51440fcb6f&mpshare=1&scene=1&srcid=0622ofqaYewpeU6XlieGPUgl&sharer_sharetime=1624325184664&sharer_shareid=bb12138cbf7121360054152c6932a462&version=3.1.8.3015&platform=win#rd)
+[一文看尽深度学习中的各种注意力机制（1998-2020年）](https://mp.weixin.qq.com/s?__biz=MzUxNjcxMjQxNg==&mid=2247527357&idx=2&sn=ae28db152ca827a294d87588be0cafaa&chksm=f9a11932ced69024cfd1229477af13496b41e327a68a3b9dd0199f8aeeb1891d06545940531f&mpshare=1&scene=1&srcid=06292DeC1OAJf0TDqkSsC5By&sharer_sharetime=1624943008429&sharer_shareid=bb12138cbf7121360054152c6932a462&version=3.1.8.3015&platform=win#rd)
+
+
+### PTM(Pretrained Model)
+* PTM模型大部分是基于上面基础深度学习网路，通过某种策略，搭建而成
+#### BERT
+#### GPT
 
