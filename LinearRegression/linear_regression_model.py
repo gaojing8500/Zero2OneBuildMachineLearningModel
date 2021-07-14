@@ -1,7 +1,7 @@
 '''
 Author: your name
 Date: 2021-06-17 20:31:12
-LastEditTime: 2021-06-30 14:26:55
+LastEditTime: 2021-07-01 11:36:55
 LastEditors: Please set LastEditors
 Description: In User Settings Edit
 FilePath: /Zero2OneBuildMachineLearningModel/LinearRegression/linear_regression_model.py
@@ -34,6 +34,8 @@ class LinearRegressionModel(BaseModel):
         w = np.zeros((dims,1))
         b = 0
         return w,b 
+
+    
     
         
         

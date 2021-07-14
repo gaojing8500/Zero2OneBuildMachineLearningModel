@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-17 20:09:14
- * @LastEditTime: 2021-06-30 14:54:31
+ * @LastEditTime: 2021-07-14 21:51:36
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /Zero2OneBuildMachineLearningModel/README.md
@@ -29,6 +29,7 @@
 #### KNN
 #### LDA
 #### 贝叶斯(Bayesian model)
+#### CRF
 
 #### ......
 
@@ -40,6 +41,7 @@
 [Gensim](https://radimrehurek.com/gensim/auto_examples/index.html#documentation)
 
 [手动推导经典机器学习模型](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI4ODY2NjYzMQ==&action=getalbum&album_id=1369989062744211457&scene=173&from_msgid=2247484471&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
+[阿泽笔记 关于决策树讲的很好](https://zhuanlan.zhihu.com/p/85731206)
 ### 深度学习模型
 #### CNN
 #### RNN
@@ -69,6 +71,7 @@
 
 [Graph Neural Networks for Natural Language Processing: A Survey](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247503451&idx=1&sn=0cfb45f050568f6f8fe681425f6ad078&chksm=eb53dac8dc2453dea1a32162267737c7d5458c6665d507fd1859b9e8d3909717cb51440fcb6f&mpshare=1&scene=1&srcid=0622ofqaYewpeU6XlieGPUgl&sharer_sharetime=1624325184664&sharer_shareid=bb12138cbf7121360054152c6932a462&version=3.1.8.3015&platform=win#rd)
 [一文看尽深度学习中的各种注意力机制（1998-2020年）](https://mp.weixin.qq.com/s?__biz=MzUxNjcxMjQxNg==&mid=2247527357&idx=2&sn=ae28db152ca827a294d87588be0cafaa&chksm=f9a11932ced69024cfd1229477af13496b41e327a68a3b9dd0199f8aeeb1891d06545940531f&mpshare=1&scene=1&srcid=06292DeC1OAJf0TDqkSsC5By&sharer_sharetime=1624943008429&sharer_shareid=bb12138cbf7121360054152c6932a462&version=3.1.8.3015&platform=win#rd)
+[深度学习笔记3：手动搭建深度神经网络（DNN）](https://mp.weixin.qq.com/s?__biz=MzI4ODY2NjYzMQ==&mid=2247484171&idx=1&sn=bc35cddb7ca5976881cf1607f8caa2a1&chksm=ec3ba663db4c2f751d635dbcc863a01d7d0feae071ae19e720fbbdafd3e11fe7796a8f2573ca&scene=21#wechat_redirect)
 
 
 ### PTM(Pretrained Model)
