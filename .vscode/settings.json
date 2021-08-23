@@ -1,0 +1,6 @@
+{
+    "editor.snippetSuggestions": "bottom",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "python.pythonPath": "/home/gaojing/anaconda3/envs/paddlepaddle-gpu-2.1.0/bin",
+    "restructuredtext.confPath": ""
+}
