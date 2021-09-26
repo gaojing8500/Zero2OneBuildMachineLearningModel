@@ -8,7 +8,7 @@ FilePath: /Zero2OneBuildMachineLearningModel/main.py
 '''
 import numpy as np
 
-from BuildDataSet.word2vec_dataset_utils import build_vocab
+from BuildDataSet.word2vec_dataset_utils import  DataPreProcess
 from DNN.activation import Sigmoid, Tanh, Relu
 from DNN.rnn import LSTM, GRU
 from EncoderDecoder.Seq2Seq import Encoder, Decoder, Seq2Seq
@@ -95,11 +95,16 @@ def test_build_vocab():
                 "因此需要通过查重修改，将重复的重复的内容删除更改，这就是查重。在python中，如果一组内容有重复的内容，",
                 "他们发挥的作用也是一样的，这时我们就需要去重。你知道在python中如何去重吗？本文小编就告诉你几种去重的方法",
                 "武汉联影是一家牛逼的公司"]
-    vocab = build_vocab(sentence)
-    one_hot = OneHot(vocab)
+
+    test_list = ["我们是联影的好员工，联影是我们的家。"]
+    # data_pre_process = DataPreProcess(sentence)
+    # vocab = data_pre_process.build_vocab()
+    # fre_vocab = data_pre_process.get_frequency(test_list)
+    one_hot = OneHot(sentence)
     # one_hot = one_hot.transform("武汉")
     # print(one_hot)
-    one_hot_ = one_hot.transform(["武汉","联影"])
+    # fre = one_hot.get_frequency(sentence)
+    one_hot_ = one_hot.transform(["武汉联影是一家牛逼的公司，我们是武汉联影的一员。"])
     print(one_hot_)
 
 
