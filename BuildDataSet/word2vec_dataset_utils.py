@@ -1,3 +1,11 @@
+'''
+Author: your name
+Date: 2021-09-27 19:40:54
+LastEditTime: 2021-09-27 19:43:47
+LastEditors: your name
+Description: In User Settings Edit
+FilePath: /Zero2OneBuildMachineLearningModel/BuildDataSet/word2vec_dataset_utils.py
+'''
 from collections import defaultdict
 from typing import List
 
