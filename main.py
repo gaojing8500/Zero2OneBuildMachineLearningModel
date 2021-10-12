@@ -3,14 +3,18 @@ Author: your name
 Date: 2021-06-18 16:34:54
 LastEditTime: 2021-07-13 17:59:07
 LastEditors: Please set LastEditors
-Description: In User Settings Edit
+Description: In User Settings Edit https://github.com/datawhalechina/dive-into-cv-pytorch/blob/master/code/chapter06_transformer
 FilePath: /Zero2OneBuildMachineLearningModel/main.py
 '''
 import numpy as np
+from matplotlib import pyplot as plt
+from torch.autograd import Variable
 
 from BuildDataSet.word2vec_dataset_utils import  DataPreProcess
 from DNN.activation import Sigmoid, Tanh, Relu
 from DNN.rnn import LSTM, GRU
+from DNN.train_transfomer import first_demo, NoamOpt, LabelSmoothing, greedy_decode_demo
+from DNN.transformer import subsequent_mask, make_model, PositionalEncoding, MultiHeadedAttentionTest
 from EncoderDecoder.Seq2Seq import Encoder, Decoder, Seq2Seq
 from LinearRegression.linear_regression_model import LinearRegressionModel
 from DecisionTree.ID3Tree import ID3Tree
@@ -107,8 +111,98 @@ def test_build_vocab():
     one_hot_ = one_hot.transform(["武汉联影是一家牛逼的公司，我们是武汉联影的一员。"])
     print(one_hot_)
 
+def test_transforme_torch():
+    print("\n-----------------------")
+    print("test subsequect_mask")
+    temp_mask = subsequent_mask(4)
+    print(temp_mask)
+
+    print("\n-----------------------")
+    print("test build model")
+    tmp_model = make_model(10, 10,2)
+    print(tmp_model)
+
+def test_train_transformes():
+    first_demo()
+
+
+def test_transfomer_optimizer():
+    opts = [NoamOpt(512, 1, 4000, None),
+            NoamOpt(512, 1, 8000, None),
+            NoamOpt(256, 1, 4000, None)]
+    plt.plot(np.arange(1, 20000), [[opt.rate(i) for opt in opts] for i in range(1, 20000)])
+    plt.legend(["512:4000", "512:8000", "256:4000"])
+    plt.show()
+
+
+def test_label_smoothing():
+    # Example of label smoothing.
+    crit = LabelSmoothing(5, 0, 0.4)
+    predict = torch.FloatTensor([[0, 0.2, 0.7, 0.1, 0],
+                                 [0, 0.2, 0.7, 0.1, 0],
+                                 [0, 0.2, 0.7, 0.1, 0]])
+    v = crit(Variable(predict.log()),
+             Variable(torch.LongTensor([2, 1, 0])))
+
+    # Show the target distributions expected by the system.
+    plt.imshow(crit.true_dist)
+    plt.show()
+
+
+def loss(x):
+    crit = LabelSmoothing(5, 0, 0.1)
+    d = x + 3 * 1
+    predict = torch.FloatTensor([[0, x / d, 1 / d, 1 / d, 1 / d],
+                                     ])
+    # print(predict)
+    return crit(Variable(predict.log()),
+                    Variable(torch.LongTensor([1]))).data[0]
+
+
+def test_label_smoothing_loss():
+    plt.plot(np.arange(1, 100), [loss(x) for x in range(1, 100)])
+    plt.show()
+
+
+def test_position_embedding():
+    plt.figure(figsize=(15, 5))
+    pe = PositionalEncoding(20, 0)
+    y = pe.forward(Variable(torch.zeros(1, 100, 20)))
+    plt.plot(np.arange(100), y[0, :, 4:8].data.numpy())
+    plt.legend(["dim %d" % p for p in [4, 5, 6, 7]])
+    plt.show()
+
+def test_greed_decode():
+    greedy_decode_demo()
+
+
+def  test_transfomer_mutiattention():
+    query = torch.rand(64,12,300)
+    key = torch.rand(64,10,300)
+    value = torch.rand(64,10,300)
+    model = MultiHeadedAttentionTest(hidden_dim=300,h_heads=6,dropout=0.1)
+    output = model(query,key,value)
+    print(output.shape)
+
+def new_decorate(fun):
+    def wrapper_fuc():
+        print("hello test_decorate")
+        fun()
+        print("hello test after")
+    return wrapper_fuc
+
+@new_decorate
+def test_decorate():
+    print("hello 装饰器")
+
+
+
 
 
 if __name__ == "__main__":
     # testID3Tree()
-   test_build_vocab()
+   # test_build_vocab()
+   # test_label_smoothing_loss()
+   # test_transfomer_mutiattention()
+   # test_train_transformes()
+    test_decorate()
